@@ -6,3 +6,4 @@ This is a fairly simple setup in terraform which creates the following:
  - Three VPC Endpoints (Interface Endpoints) to allow communication with SSM over PrivateLink
  - An IAM role to allow the instances to be managed by SSM
 
+This allows for SSM administation of the 2 instances.   
