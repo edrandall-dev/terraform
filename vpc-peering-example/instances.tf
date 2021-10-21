@@ -37,7 +37,7 @@ resource "aws_instance" "edr_instance_2a" {
   vpc_security_group_ids      = [aws_security_group.edr_vpc_2_sg.id]
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_instance_2a"
+    "Name"    = "${var.env_prefix}_instance_2a"
     "Creator" = var.built_by
   }
 }
@@ -51,7 +51,7 @@ resource "aws_instance" "edr_instance_2b" {
   vpc_security_group_ids      = [aws_security_group.edr_vpc_2_sg.id]
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_instance_2b"
+    "Name"    = "${var.env_prefix}_instance_2b"
     "Creator" = var.built_by
   }
 }

@@ -11,7 +11,7 @@ resource "aws_vpc_endpoint" "edr_vpc_1_vpce_ssm" {
   private_dns_enabled = true
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_vpc_1_vpce_ssm"
+    "Name"    = "${var.env_prefix}_vpc_1_vpce_ssm"
     "Creator" = var.built_by
   }
 
@@ -32,7 +32,7 @@ resource "aws_vpc_endpoint" "edr_vpc_1_vpce_ec2messages" {
   private_dns_enabled = true
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_vpc_1_vpce_ec2messages"
+    "Name"    = "${var.env_prefix}_vpc_1_vpce_ec2messages"
     "Creator" = var.built_by
   }
 
@@ -55,7 +55,7 @@ resource "aws_vpc_endpoint" "edr_vpc_1_vpce_ssmmessages" {
   private_dns_enabled = true
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_vpc_1_vpce_ssmmessages"
+    "Name"    = "${var.env_prefix}_vpc_1_vpce_ssmmessages"
     "Creator" = var.built_by
   }
 
@@ -78,7 +78,7 @@ resource "aws_vpc_endpoint" "edr_vpc_2_vpce_ssm" {
   private_dns_enabled = true
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_vpc_2_vpce_ssm"
+    "Name"    = "${var.env_prefix}_vpc_2_vpce_ssm"
     "Creator" = var.built_by
   }
 
@@ -99,7 +99,7 @@ resource "aws_vpc_endpoint" "edr_vpc_2_vpce_ec2messages" {
   private_dns_enabled = true
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_vpc_2_vpce_ec2messages"
+    "Name"    = "${var.env_prefix}_vpc_2_vpce_ec2messages"
     "Creator" = var.built_by
   }
 
@@ -122,7 +122,7 @@ resource "aws_vpc_endpoint" "edr_vpc_2_vpce_ssmmessages" {
   private_dns_enabled = true
 
   tags = {
-    "Name"    = "${var.env_prefix}_edr_vpc_2_vpce_ssmmessages"
+    "Name"    = "${var.env_prefix}_vpc_2_vpce_ssmmessages"
     "Creator" = var.built_by
   }
 
