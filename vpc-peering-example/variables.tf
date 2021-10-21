@@ -13,12 +13,12 @@ variable "vpc_1_cidr" {
   type    = string
 }
 
-variable "subnet_1A_cidr" {
+variable "subnet_1a_cidr" {
   default = "10.101.1.0/24"
   type    = string
 }
 
-variable "subnet_1B_cidr" {
+variable "subnet_1b_cidr" {
   default = "10.101.2.0/24"
   type    = string
 }
@@ -28,12 +28,12 @@ variable "vpc_2_cidr" {
   type    = string
 }
 
-variable "subnet_2A_cidr" {
+variable "subnet_2a_cidr" {
   default = "10.102.1.0/24"
   type    = string
 }
 
-variable "subnet_AB_cidr" {
+variable "subnet_2b_cidr" {
   default = "10.102.2.0/24"
   type    = string
 }
