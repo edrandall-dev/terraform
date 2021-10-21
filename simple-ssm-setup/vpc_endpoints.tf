@@ -15,8 +15,8 @@ resource "aws_vpc_endpoint" "edr_vpce_ssm" {
   }
 
   subnet_ids = [
-    aws_subnet.edr_subnet_1.id,
-    aws_subnet.edr_subnet_2.id
+    aws_subnet.edr_public_subnet_1.id,
+    aws_subnet.edr_public_subnet_2.id
   ]
 }
 
@@ -37,8 +37,8 @@ resource "aws_vpc_endpoint" "edr_vpce_ec2messages" {
   private_dns_enabled = true
 
   subnet_ids = [
-    aws_subnet.edr_subnet_1.id,
-    aws_subnet.edr_subnet_2.id
+    aws_subnet.edr_public_subnet_1.id,
+    aws_subnet.edr_public_subnet_2.id
   ]
 }
 
@@ -59,7 +59,7 @@ resource "aws_vpc_endpoint" "edr_vpce_ssmmessages" {
   private_dns_enabled = true
 
   subnet_ids = [
-    aws_subnet.edr_subnet_1.id,
-    aws_subnet.edr_subnet_2.id
+    aws_subnet.edr_public_subnet_1.id,
+    aws_subnet.edr_public_subnet_2.id
   ]
 }
