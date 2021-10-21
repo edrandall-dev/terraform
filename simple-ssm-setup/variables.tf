@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "env_prefix" {
-  default = "edr_test_env"
+  default = "edr_peering_env"
   type    = string
 }
 
