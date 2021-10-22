@@ -11,17 +11,12 @@ resource "aws_vpc" "edr_vpc" {
   }
 }
 
-//vpc_id      = "aws_vpc.edr_vpc${count.index}.id"
-
-
-/*
 
 resource "aws_subnet" "edr_subnet" {
-  count = 3
-  //cidr_block        = "var.subnet_${count.index}a_cidr"
-  cidr_block = "10.10${count.index}.0.0/16"
+  count      = 3
+  cidr_block = "10.${count.index}.0.0/24"
 
-  vpc_id            = "aws_vpc.edr_vpc${count.index}.id"
+  vpc_id            = element(aws_vpc.edr_vpc.*.id, count.index)
   availability_zone = "${var.region}a"
 
   tags = {

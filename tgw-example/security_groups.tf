@@ -5,9 +5,9 @@ resource "aws_security_group" "edr_vpc_sg" {
   description = "Security Group for VPC${count.index}"
 
   //Need to understand this:
-  vpc_id = element(aws_vpc.edr_vpc.*.id, count.index)  
+  vpc_id = element(aws_vpc.edr_vpc.*.id, count.index)
   //
-  
+
   tags = {
     "Name"    = "${var.env_prefix}_VPC${count.index}_sg"
     "Creator" = var.built_by
