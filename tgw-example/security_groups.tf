@@ -1,11 +1,15 @@
-//Security Group for VPC1
-resource "aws_security_group" "edr_vpc1_sg" {
-  name        = "${var.env_prefix}_vpc1_sg"
-  description = "Security Group for VPC1"
-  vpc_id      = aws_vpc.edr_vpc1.id
+//Create a security group for each VPC, using count
+resource "aws_security_group" "edr_vpc_sg" {
+  count       = 3
+  name        = "${var.env_prefix}_vpc${count.index}_sg"
+  description = "Security Group for VPC${count.index}"
 
+  //Need to understand this:
+  vpc_id = element(aws_vpc.edr_vpc.*.id, count.index)  
+  //
+  
   tags = {
-    "Name"    = "${var.env_prefix}_VPC1_sg"
+    "Name"    = "${var.env_prefix}_VPC${count.index}_sg"
     "Creator" = var.built_by
   }
 
@@ -23,6 +27,8 @@ resource "aws_security_group" "edr_vpc1_sg" {
     self      = true
   }
 }
+
+/*
 
 //Security Group for VPC2
 resource "aws_security_group" "edr_vpc2_sg" {
@@ -75,3 +81,5 @@ resource "aws_security_group" "edr_vpc3_sg" {
     self      = true
   }
 }
+
+*/

@@ -8,6 +8,22 @@ variable "env_prefix" {
   type    = string
 }
 
+variable "vpc_count" {
+  default = 3
+}
+
+
+
+variable "vpc0_cidr" {
+  default = "10.100.0.0/16"
+  type    = string
+}
+
+variable "subnet_0a_cidr" {
+  default = "10.100.0.0/24"
+  type    = string
+}
+
 variable "vpc1_cidr" {
   default = "10.101.0.0/16"
   type    = string
@@ -23,21 +39,10 @@ variable "vpc2_cidr" {
   type    = string
 }
 
-variable "subnet_2a_cidr" {
+variable "subnet_2_cidr" {
   default = "10.102.0.0/24"
   type    = string
 }
-
-variable "vpc3_cidr" {
-  default = "10.103.0.0/16"
-  type    = string
-}
-
-variable "subnet_3a_cidr" {
-  default = "10.103.0.0/24"
-  type    = string
-}
-
 
 variable "built_by" {
   default = "Ed Randall (using terraform)"

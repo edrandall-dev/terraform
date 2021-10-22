@@ -1,3 +1,4 @@
+/*
 //VPC1 Instance
 resource "aws_instance" "edr_instance_1a" {
   ami                         = var.stockholm_linux_ami
@@ -43,3 +44,4 @@ resource "aws_instance" "edr_instance_3a" {
   }
 }
 
+*/

@@ -1,3 +1,38 @@
+//Create 3 VPCs (each with a single subnet), using 'count'
+resource "aws_vpc" "edr_vpc" {
+  count      = 3
+  cidr_block = "10.${count.index}.0.0/16"
+
+  enable_dns_hostnames = true
+  enable_dns_support   = true
+  tags = {
+    "Name"    = "${var.env_prefix}_vpc${count.index}"
+    "Creator" = var.built_by
+  }
+}
+
+//vpc_id      = "aws_vpc.edr_vpc${count.index}.id"
+
+
+/*
+
+resource "aws_subnet" "edr_subnet" {
+  count = 3
+  //cidr_block        = "var.subnet_${count.index}a_cidr"
+  cidr_block = "10.10${count.index}.0.0/16"
+
+  vpc_id            = "aws_vpc.edr_vpc${count.index}.id"
+  availability_zone = "${var.region}a"
+
+  tags = {
+    "Name"    = "${var.env_prefix}_subnet_${count.index}a"
+    "Creator" = var.built_by
+  }
+}
+
+
+/*
+
 //VPC1 and associated subnet
 resource "aws_vpc" "edr_vpc1" {
   cidr_block           = var.vpc1_cidr
