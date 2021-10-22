@@ -12,8 +12,6 @@ variable "vpc_count" {
   default = 3
 }
 
-
-
 variable "vpc0_cidr" {
   default = "10.100.0.0/16"
   type    = string

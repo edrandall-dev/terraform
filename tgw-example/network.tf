@@ -11,7 +11,7 @@ resource "aws_vpc" "edr_vpc" {
   }
 }
 
-
+//Create 3 Subnets (one in each VPC), using 'count'
 resource "aws_subnet" "edr_subnet" {
   count      = 3
   cidr_block = "10.${count.index}.0.0/24"

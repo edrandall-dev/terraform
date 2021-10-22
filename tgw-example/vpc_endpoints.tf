@@ -9,7 +9,6 @@ resource "aws_vpc_endpoint" "edr_vpce_ssm" {
 
   security_group_ids = [
     element(aws_security_group.edr_vpc_sg.*.id, count.index)
-
   ]
 
   private_dns_enabled = true
