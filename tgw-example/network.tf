@@ -33,7 +33,7 @@ resource "aws_default_route_table" "edr_default_route_table_vpc0" {
       cidr_block = "10.1.0.0/16"
     }
   
-   route {
+  route {
       transit_gateway_id = aws_ec2_transit_gateway.edr-transit-gateway.id
       cidr_block = "10.2.0.0/16"
     }
@@ -51,7 +51,7 @@ resource "aws_default_route_table" "edr_default_route_table_vpc1" {
       cidr_block = "10.0.0.0/16"
     }
   
-   route {
+  route {
       transit_gateway_id = aws_ec2_transit_gateway.edr-transit-gateway.id
       cidr_block = "10.2.0.0/16"
     }
@@ -69,7 +69,7 @@ resource "aws_default_route_table" "edr_default_route_table_vpc2" {
       cidr_block = "10.0.0.0/16"
     }
   
-   route {
+  route {
       transit_gateway_id = aws_ec2_transit_gateway.edr-transit-gateway.id
       cidr_block = "10.1.0.0/16"
     }

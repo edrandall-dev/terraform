@@ -1,7 +1,7 @@
 //Create 3 instances (one in each subnet), using 'count'
 resource "aws_instance" "edr_instance" {
   count                       = 3
-  ami                         = var.stockholm_linux_ami
+  ami                         = data.aws_ami.latest_amzn_linux2.id
   instance_type               = "t3.micro"
   subnet_id                   = element(aws_subnet.edr_subnet.*.id, count.index)
   associate_public_ip_address = false

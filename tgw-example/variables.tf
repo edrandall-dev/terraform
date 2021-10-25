@@ -47,11 +47,6 @@ variable "built_by" {
   type    = string
 }
 
-variable "stockholm_linux_ami" {
-  default = "ami-0d15082500b576303"
-  type    = string
-}
-
 locals {
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
