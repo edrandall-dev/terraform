@@ -2,6 +2,11 @@ variable "region" {
   type = string
 }
 
+variable "profile" {
+  default = "rackspace"
+  type    = string
+}
+
 variable "home_ip" {
   type = string
 }

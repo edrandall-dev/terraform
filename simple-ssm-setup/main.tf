@@ -5,9 +5,11 @@ terraform {
     bucket = "edrandall-tf-backend"
     key    = "tf-backends/simple-ssm-setup"
     region = "eu-north-1"
+    profile = "rackspace"
   }
 }
 
 provider "aws" {
   region = var.region
+  profile = "rackspace"
 }

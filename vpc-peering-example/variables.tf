@@ -2,6 +2,10 @@ variable "region" {
   default = "eu-north-1"
   type    = string
 }
+variable "profile" {
+  default = "rackspace"
+  type    = string
+}
 
 variable "env_prefix" {
   default = "edr_peering_env"

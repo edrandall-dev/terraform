@@ -3,6 +3,11 @@ variable "region" {
   type    = string
 }
 
+variable "profile" {
+  default = "rackspace"
+  type    = string
+}
+
 variable "env_prefix" {
   default = "edr_peering_env"
   type    = string
