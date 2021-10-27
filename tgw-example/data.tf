@@ -1,3 +1,4 @@
+//Used to find a suitable AMI
 data "aws_ami" "latest_amzn_linux2" {
   most_recent = true
   owners = ["amazon"]
