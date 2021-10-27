@@ -9,7 +9,7 @@ variable "profile" {
 }
 
 variable "env_prefix" {
-  default = "edr_peering_env"
+  default = "edr_simple_ssm_env"
   type    = string
 }
 
